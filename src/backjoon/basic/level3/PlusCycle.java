@@ -24,16 +24,14 @@ public class PlusCycle {
             System.out.println(count);
         } else {
             while (true) {
+                a = c / 10;
+                b = c % 10;
                 c = (c%10)*10 + (a+b)%10;
                 count++;
 
                 if (c == n) {
                     System.out.println(count);
                     break;
-                }
-                else {
-                    a = c / 10;
-                    b = c % 10;
                 }
             }
         }
