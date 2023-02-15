@@ -12,3 +12,4 @@ public class SumOfNums {
         return sum;
     }
 }
+//15596 정수 N개의 합

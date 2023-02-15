@@ -28,3 +28,4 @@ public class SelfNumber {
         }
     }
 }
+//4673 셀프 넘버
