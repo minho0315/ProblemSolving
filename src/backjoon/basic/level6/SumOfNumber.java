@@ -18,3 +18,4 @@ public class SumOfNumber {
         System.out.println(result);
     }
 }
+// 11720 숫자의 합
