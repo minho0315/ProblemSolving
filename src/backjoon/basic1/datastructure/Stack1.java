@@ -50,3 +50,4 @@ public class Stack1 {
         bw.close();
     }
 }
+//10828 스택
