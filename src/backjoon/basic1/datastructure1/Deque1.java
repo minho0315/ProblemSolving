@@ -1,53 +1,56 @@
-package backjoon.basic1.datastructure;
+package backjoon.basic1.datastructure1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
-public class Queue1 {
+public class Deque1 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int last = 0;
 
-        Queue<String> queue = new LinkedList<>();
+        Deque<String> d = new LinkedList<>();
         List<String> result = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
             String[] cmd = br.readLine().split(" ");
 
-            if (cmd[0].equals("push")) {
-                queue.add(cmd[1]);
-                last = Integer.parseInt(cmd[1]);
-            } else if (cmd[0].equals("pop")) {
-                if (queue.isEmpty()) {
+            if (cmd[0].equals("push_front")) {
+                d.addFirst(cmd[1]);
+            } else if (cmd[0].equals("push_back")) {
+                d.addLast(cmd[1]);
+            } else if (cmd[0].equals("pop_front")) {
+                if (d.isEmpty()) {
                     result.add("-1");
                 } else {
-                    result.add(queue.remove());
+                    result.add(d.pollFirst());
+                }
+            } else if (cmd[0].equals("pop_back")) {
+                if (d.isEmpty()) {
+                    result.add("-1");
+                } else {
+                    result.add(d.pollLast());
                 }
             } else if (cmd[0].equals("size")) {
-                result.add(String.valueOf(queue.size()));
+                result.add(String.valueOf(d.size()));
             } else if (cmd[0].equals("empty")) {
-                if (queue.isEmpty()) {
+                if (d.isEmpty()) {
                     result.add("1");
                 } else {
                     result.add("0");
                 }
             } else if (cmd[0].equals("front")) {
-                if (queue.isEmpty()) {
+                if (d.isEmpty()) {
                     result.add("-1");
                 } else {
-                    result.add(queue.peek());
+                    result.add(d.peekFirst());
                 }
             } else if (cmd[0].equals("back")) {
-                if (queue.isEmpty()) {
+                if (d.isEmpty()) {
                     result.add("-1");
                 } else {
-                    result.add(String.valueOf(last));
+                    result.add(d.peekLast());
                 }
             }
         }
@@ -57,4 +60,4 @@ public class Queue1 {
         }
     }
 }
-//10845 큐
+//10866 덱
