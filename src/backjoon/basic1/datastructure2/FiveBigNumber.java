@@ -21,7 +21,6 @@ public class FiveBigNumber {
         Stack<Integer> stack = new Stack<>();
 
         String[] input = bufferedReader.readLine().split(" ");
-
         for (int i = 0; i < input.length; i++) {
             a.add(Integer.parseInt(input[i]));
         }
