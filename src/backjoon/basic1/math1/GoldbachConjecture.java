@@ -42,6 +42,7 @@ public class GoldbachConjecture {
 //        }
 //    }
 
+    // https://www.acmicpc.net/problem/6588
     static boolean[] prime_nums;
 
     public static void main(String[] args) throws IOException {
