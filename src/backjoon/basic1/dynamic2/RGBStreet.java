@@ -28,3 +28,5 @@ public class RGBStreet {
         System.out.println(result);
     }
 }
+//1149 RGB거리
+//https://pacific-ocean.tistory.com/147
