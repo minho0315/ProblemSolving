@@ -1,4 +1,4 @@
-package backjoon.basic1.datastructure2;
+package backjoon.basic1.dynamic2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
