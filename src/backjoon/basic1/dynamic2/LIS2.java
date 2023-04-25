@@ -30,3 +30,4 @@ public class LIS2 {
         System.out.println(Arrays.stream(dp).max().getAsInt());
     }
 }
+//11722 가장 긴 감소하는 부분 수열
