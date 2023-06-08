@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class TSP2 {
+
     static int n;
     static boolean[] visited;
     static int[][] map;
@@ -26,19 +27,19 @@ public class TSP2 {
 
         visited = new boolean[n];
         visited[0] = true;
-        dfs(0, 0); // dfs 한번만
+        dfs(0, 0);
         System.out.println(result_min);
     }
 
-    public static void dfs(int now, long cost){
+    public static void dfs(int now, long cost) {
         if (allVisited()) {
-            if(map[now][0]!=0){ // 첫번째 도시로 가는 길이 있을 경우
-                result_min = Math.min(result_min, cost+map[now][0]);
+            if (map[now][0] != 0) {
+                result_min = Math.min(result_min, cost + map[now][0]);
             }
             return;
         }
 
-        for(int i=1; i<n; i++){
+        for (int i = 1; i < n; i++) {
             if (!visited[i] && map[now][i] != 0) {
                 visited[i] = true;
                 dfs(i, cost + map[now][i]);
